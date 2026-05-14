@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt – Schreib uns | mmhammer.org</title>
+<meta name="description" content="Kontaktiere Meike & Michael Hammer auf Zypern. Anfragen zu Wohnmobil, Villa Potima oder Expat-Kickstarter – wir melden uns persönlich.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1A1A1A">
+<meta name="msapplication-TileColor" content="#1A1A1A">
+<meta name="msapplication-TileImage" content="/favicon-192x192.png">
+<meta property="og:title" content="Kontakt – Schreib uns | mmhammer.org">
+<meta property="og:description" content="Kontaktiere Meike & Michael Hammer auf Zypern. Anfragen zu Wohnmobil, Villa Potima oder Expat-Kickstarter – wir melden uns persönlich.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.mmhammer.org/kontakt">
+<meta property="og:image" content="https://www.mmhammer.org/og-image-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="M+M Hammer Ltd – Zypern erleben">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.mmhammer.org/og-image-1200x630.png">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <img src="images/logo-mark.svg" alt="M+M Hammer Logo">
+      <span>mmhammer.org</span>
+    </a>
+    <button class="nav-toggle" aria-label="Menü öffnen" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Hammer-Time</a></li>
+      <li><a href="wohnmobil.html">Wohnmobil</a></li>
+      <li><a href="villa-potima.html">Villa Potima</a></li>
+      <li><a href="auswandern.html">Auswandern</a></li>
+      <li><a href="buecher.html">Bücher</a></li>
+      <li><a href="kontakt.html" class="active">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Schreib uns</h1>
+      <p>Wir freuen uns auf deine Nachricht. Persönliche Antwort, kein Newsletter, keine Weitergabe.</p>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <label for="cf-name">Name <span class="req">*</span></label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-row form-row-split">
+            <div>
+              <label for="cf-email">E-Mail <span class="req">*</span></label>
+              <input type="email" id="cf-email" name="email" autocomplete="email" required>
+            </div>
+            <div>
+              <label for="cf-phone">Telefon (optional)</label>
+              <input type="tel" id="cf-phone" name="phone" autocomplete="tel">
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="cf-topic">Worum geht's? <span class="req">*</span></label>
+            <select id="cf-topic" name="topic" required>
+              <option value="">Bitte wählen …</option>
+              <option value="Wohnmobil">Wohnmobil mieten</option>
+              <option value="Villa Potima">Villa Potima – Urlaub oder Event</option>
+              <option value="Expat-Kickstarter">Auswandern / Expat-Kickstarter</option>
+              <option value="Bücher">Hammer-Bücher</option>
+              <option value="Sonstiges">Sonstiges</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="cf-message">Deine Nachricht <span class="req">*</span></label>
+            <textarea id="cf-message" name="message" rows="6" required placeholder="Erzähl uns kurz, worum es geht – Zeitraum, Personen, Wünsche …"></textarea>
+          </div>
+          <div class="form-row form-row-honeypot" aria-hidden="true">
+            <label for="cf-website">Website (bitte freilassen)</label>
+            <input type="text" id="cf-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="form-row form-row-check">
+            <label><input type="checkbox" id="cf-consent" name="consent" required> Ich habe die <a href="impressum.html#datenschutz">Datenschutzhinweise</a> gelesen und bin damit einverstanden, dass meine Angaben zur Beantwortung meiner Anfrage gespeichert werden.</label>
+          </div>
+          <div class="form-row">
+            <button type="submit" class="btn" id="cf-submit">Nachricht senden</button>
+          </div>
+          <div class="form-status" id="cf-status" role="status" aria-live="polite"></div>
+        </form>
+        <aside class="contact-aside">
+          <h2 style="text-align:left;font-size:1.4rem;">Direkter Draht</h2>
+          <p><strong>E-Mail</strong><br><a href="mailto:info@mmhammer.org">info@mmhammer.org</a></p>
+          <p><strong>Adresse</strong><br>M+M Hammer Ltd<br>Akoursos 30A<br>8560 Pegeia, Paphos<br>Cyprus</p>
+          <p><strong>Social</strong><br>
+            <a href="https://www.youtube.com/channel/UCVqtqVe_KqPPO0bzelPXA2w" target="_blank" rel="noopener">YouTube</a> ·
+            <a href="https://www.instagram.com/villa_potima" target="_blank" rel="noopener">Instagram</a>
+          </p>
+          <p class="contact-meta">Wir antworten in der Regel innerhalb von 24&nbsp;Stunden – auf Zypern leben wir mediterran, aber zuverlässig.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div><strong>M+M Hammer Ltd</strong><br>Akoursos 30A, 8560 Pegeia, Paphos, Cyprus<br><a href="mailto:info@mmhammer.org">info@mmhammer.org</a> · <a href="impressum.html">Impressum &amp; Datenschutz</a></div>
+    <div class="social">
+      <a href="https://www.youtube.com/channel/UCVqtqVe_KqPPO0bzelPXA2w" aria-label="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2c-.3-1-1-1.8-2-2C19.7 3.8 12 3.8 12 3.8s-7.7 0-9.5.4c-1 .2-1.7 1-2 2C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1 1.8 2 2 1.8.4 9.5.4 9.5.4s7.7 0 9.5-.4c1-.2 1.7-1 2-2 .5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"/></svg></a>
+      <a href="https://www.instagram.com/villa_potima" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4 1 .5.4.8.8 1 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-1 1.4-.4.5-.8.8-1.4 1-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-1-.5-.4-.8-.8-1-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 1-1.4.4-.5.8-.8 1.4-1 .4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1zm0 3.7a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 6.6a2.6 2.6 0 1 0 0-5.2 2.6 2.6 0 0 0 0 5.2zm5.1-6.8a.95.95 0 1 1 0-1.9.95.95 0 0 1 0 1.9z"/></svg></a>
+    </div>
+    <div class="copyright" style="grid-column:1/-1;">© <span id="year"></span> M+M Hammer Ltd · HE424634 · CY10424634L</div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+(function(){
+  var form = document.getElementById('contact-form');
+  var status = document.getElementById('cf-status');
+  var submit = document.getElementById('cf-submit');
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    status.className = 'form-status';
+    status.textContent = '';
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    var data = Object.fromEntries(new FormData(form).entries());
+    submit.disabled = true;
+    submit.textContent = 'Wird gesendet …';
+    try {
+      var res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      var body = await res.json().catch(function(){ return {}; });
+      if (!res.ok) throw new Error(body.error || 'Senden fehlgeschlagen.');
+      status.className = 'form-status ok';
+      status.textContent = 'Danke! Deine Nachricht ist bei uns – wir melden uns in den nächsten 24 Stunden.';
+      form.reset();
+    } catch (err) {
+      status.className = 'form-status err';
+      status.textContent = err.message + ' Bitte schreib uns direkt an info@mmhammer.org.';
+    } finally {
+      submit.disabled = false;
+      submit.textContent = 'Nachricht senden';
+    }
+  });
+})();
+</script>
+</body>
+</html>
