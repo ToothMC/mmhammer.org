@@ -132,6 +132,15 @@
   var form = document.getElementById('contact-form');
   var status = document.getElementById('cf-status');
   var submit = document.getElementById('cf-submit');
+  var qsTopic = new URLSearchParams(window.location.search).get('topic');
+  if (qsTopic) {
+    var topicSel = document.getElementById('cf-topic');
+    var hasOption = Array.from(topicSel.options).some(function(o){ return o.value === qsTopic; });
+    if (hasOption) {
+      topicSel.value = qsTopic;
+      setTimeout(function(){ document.getElementById('cf-name').focus(); }, 50);
+    }
+  }
   form.addEventListener('submit', async function(e){
     e.preventDefault();
     status.className = 'form-status';
