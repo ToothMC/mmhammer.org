@@ -63,6 +63,9 @@ p:last-child { margin-bottom: 0; }
 .section-intro { text-align: center; max-width: 760px; margin: 0 auto 48px; color: var(--c-text-soft); font-size: 1.08rem; }
 
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+.cards--four { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+@media (max-width: 960px) { .cards--four { grid-template-columns: repeat(2, 1fr); gap: 18px; } }
+@media (max-width: 520px) { .cards--four { grid-template-columns: 1fr; } }
 .card { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .25s, box-shadow .25s; display: flex; flex-direction: column; }
 .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 .card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
