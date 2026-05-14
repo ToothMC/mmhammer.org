@@ -16,7 +16,7 @@
   --font: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: #2D2520; }
 body { font-family: var(--font); color: var(--c-text); background: var(--c-bg); line-height: 1.65; font-size: 17px; -webkit-font-smoothing: antialiased; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--c-primary); text-decoration: none; transition: color .2s; }
@@ -184,8 +184,8 @@ p:last-child { margin-bottom: 0; }
   section { padding: 48px 0; }
 }
 @media (max-width: 640px) {
-  .hero { min-height: 100svh; padding: 60px 0 48px; background-position: center 25%; }
-  .hero::before { background: linear-gradient(180deg, rgba(6,38,46,.55) 0%, rgba(6,38,46,.25) 45%, rgba(6,38,46,.78) 100%); }
+  .hero { min-height: 600px; max-height: 720px; padding: 60px 0 48px; background-position: center 30%; background-attachment: scroll; }
+  .hero::before { background: linear-gradient(180deg, rgba(45,37,32,.55) 0%, rgba(45,37,32,.25) 45%, rgba(45,37,32,.78) 100%); }
   .hero h1 { font-size: 2.2rem; margin-bottom: 14px; }
   .hero-sub { font-size: 1.02rem; margin-bottom: 28px; }
   .hero .btn-row { flex-direction: column; align-items: stretch; padding: 0 16px; gap: 10px; }
