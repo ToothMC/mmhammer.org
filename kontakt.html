@@ -172,5 +172,17 @@
   });
 })();
 </script>
+<script>
+(function(){
+  var h = document.querySelector('.site-header');
+  var heroEl = document.querySelector('main > .hero, main > .page-hero');
+  function upd(){
+    var atTop = heroEl && window.scrollY <= 40;
+    h.classList.toggle('scrolled', !atTop);
+  }
+  upd();
+  window.addEventListener('scroll', upd, {passive:true});
+})();
+</script>
 </body>
 </html>
