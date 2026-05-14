@@ -65,10 +65,8 @@ ${message}
       html,
     });
     if (error) {
-      console.error('Resend error name:', error.name);
-      console.error('Resend error message:', error.message);
-      console.error('Resend error full:', JSON.stringify(error));
-      return res.status(502).json({ error: 'E-Mail konnte nicht zugestellt werden.', detail: error.message || error.name });
+      console.error('Resend error:', error.name, error.message, JSON.stringify(error));
+      return res.status(502).json({ error: 'E-Mail konnte nicht zugestellt werden.' });
     }
     return res.status(200).json({ ok: true, id: data?.id });
   } catch (err) {
