@@ -38,7 +38,7 @@ a:hover { color: var(--c-accent-dark); }
 .hero { position: relative; min-height: 85vh; padding: 60px 0 56px; text-align: center; color: #fff; background: #2D2520 url('images/mmhammer_hero.jpg') center 28% / cover no-repeat; display: flex; align-items: flex-end; justify-content: center; isolation: isolate; }
 .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(45,37,32,.0) 0%, rgba(45,37,32,.05) 40%, rgba(45,37,32,.55) 75%, rgba(45,37,32,.85) 100%); z-index: -1; }
 .hero .container { position: relative; }
-.hero h1 { font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 800; color: #fff; line-height: 1.15; margin-bottom: 14px; letter-spacing: -.02em; text-shadow: 0 2px 30px rgba(0,0,0,.45); }
+.hero h1, .hero .hero-title { font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 800; color: #fff; line-height: 1.15; margin-bottom: 14px; letter-spacing: -.02em; text-shadow: 0 2px 30px rgba(0,0,0,.45); }
 .hero-sub { font-size: clamp(1rem, 2vw, 1.2rem); font-weight: 500; color: rgba(255,255,255,.95); line-height: 1.4; margin: 0 auto 28px; text-shadow: 0 1px 14px rgba(0,0,0,.45); }
 .hero .lead { font-size: 1.15rem; color: rgba(255,255,255,.92); max-width: 700px; margin: 0 auto 36px; }
 .btn.btn-glass { background: rgba(255,255,255,.12); color: #fff; border-color: rgba(255,255,255,.45); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 4px 16px rgba(0,0,0,.18); font-weight: 600; }
@@ -208,7 +208,7 @@ section.band-dark .btn:hover { background: #fff; border-color: #fff; color: var(
 @media (max-width: 640px) {
   .hero { min-height: 600px; max-height: 720px; padding: 60px 0 48px; background-position: center 30%; background-attachment: scroll; }
   .hero::before { background: linear-gradient(180deg, rgba(45,37,32,.55) 0%, rgba(45,37,32,.25) 45%, rgba(45,37,32,.78) 100%); }
-  .hero h1 { font-size: 2.2rem; margin-bottom: 14px; }
+  .hero h1, .hero .hero-title { font-size: 2.2rem; margin-bottom: 14px; }
   .hero-sub { font-size: 1.02rem; margin-bottom: 28px; }
   .hero-sub br { display: none; }
   .hero .btn-row { flex-direction: column; align-items: stretch; padding: 0 16px; gap: 10px; }
@@ -234,3 +234,4 @@ section.band-dark .btn:hover { background: #fff; border-color: #fff; color: var(
   .hero--consulting .hero-sub { margin-left: auto; }
   .hero--consulting .btn-row { justify-content: center; }
 }
+#hammer-time { scroll-margin-top: 68px; }
