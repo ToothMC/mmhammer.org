@@ -43,6 +43,9 @@ a:hover { color: var(--c-accent-dark); }
 .hero .lead { font-size: 1.15rem; color: rgba(255,255,255,.92); max-width: 700px; margin: 0 auto 36px; }
 .btn.btn-glass { background: rgba(255,255,255,.12); color: #fff; border-color: rgba(255,255,255,.45); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 4px 16px rgba(0,0,0,.18); font-weight: 600; }
 .btn.btn-glass:hover { background: rgba(255,255,255,.22); border-color: rgba(255,255,255,.65); color: #fff; box-shadow: 0 8px 24px rgba(0,0,0,.28); }
+.btn.btn-hero-primary { background: var(--c-accent); border-color: var(--c-accent); color: #2b2b2b; box-shadow: 0 4px 16px rgba(0,0,0,.18); }
+.btn.btn-hero-primary:hover { background: #fff; border-color: #fff; color: var(--c-primary-dark); }
+.hero .eyebrow { color: rgba(255,255,255,.88); text-shadow: 0 1px 12px rgba(0,0,0,.5); margin-bottom: 14px; }
 .hero-trustbar { margin-top: 30px; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; color: rgba(255,255,255,.92); font-size: .95rem; font-weight: 500; }
 .hero-trustbar .star { color: var(--c-accent); margin-right: 4px; }
 
@@ -210,6 +213,7 @@ section.band-dark .btn:hover { background: #fff; border-color: #fff; color: var(
   .hero::before { background: linear-gradient(180deg, rgba(45,37,32,.55) 0%, rgba(45,37,32,.25) 45%, rgba(45,37,32,.78) 100%); }
   .hero h1 { font-size: 2.2rem; margin-bottom: 14px; }
   .hero-sub { font-size: 1.02rem; margin-bottom: 28px; }
+  .hero-sub br { display: none; }
   .hero .btn-row { flex-direction: column; align-items: stretch; padding: 0 16px; gap: 10px; }
   .hero .btn-row .btn { width: 100%; padding: 14px 20px; }
 }
