@@ -219,7 +219,7 @@ section.band-dark .btn:hover { background: #fff; border-color: #fff; color: var(
 }
 
 /* Consulting hero: Meike on the right, text on the left */
-.hero.hero--consulting { background-image: url('images/meike-hero.jpg'); background-position: 72% center; align-items: center; text-align: left; }
+.hero.hero--consulting { background-image: url('images/meike-hero.jpg'); background-position: 80% center; align-items: center; text-align: left; }
 .hero.hero--consulting::before { background: linear-gradient(90deg, rgba(34,25,18,.55) 0%, rgba(34,25,18,.15) 45%, rgba(34,25,18,0) 60%); }
 .hero--consulting .container { width: 100%; }
 .hero--consulting .hero-content { max-width: 560px; }
@@ -227,7 +227,7 @@ section.band-dark .btn:hover { background: #fff; border-color: #fff; color: var(
 .hero--consulting .hero-sub { margin-left: 0; }
 .hero--consulting .btn-row { justify-content: flex-start; }
 @media (max-width: 800px) {
-  .hero.hero--consulting { background-position: 74% top; align-items: flex-end; text-align: center; }
+  .hero.hero--consulting { background-position: 100% top; min-height: 760px; max-height: none; align-items: flex-end; text-align: center; }
   .hero.hero--consulting::before { background: linear-gradient(180deg, rgba(34,25,18,0) 30%, rgba(34,25,18,.55) 58%, rgba(34,25,18,.92) 100%); }
   .hero--consulting .hero-content { max-width: none; }
   .hero--consulting .hero-sub { margin-left: auto; }
