@@ -77,6 +77,28 @@ p:last-child { margin-bottom: 0; }
 .about img { border-radius: var(--radius); box-shadow: var(--shadow-md); }
 .about p { font-size: 1.05rem; color: var(--c-text-soft); }
 
+.about--reverse > img { order: 2; }
+.about .portrait { aspect-ratio: 4/3; object-fit: cover; width: 100%; }
+.eyebrow { display: block; font-size: .82rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--c-accent); margin-bottom: 10px; }
+section.band-dark { background: var(--c-primary-dark); color: rgba(255,255,255,.88); }
+section.band-dark h2 { color: #fff; }
+section.band-dark .about p { color: rgba(255,255,255,.85); }
+section.band-dark .about img { box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+section.band-dark .btn { background: var(--c-accent); border-color: var(--c-accent); color: #2b2b2b; }
+section.band-dark .btn:hover { background: #fff; border-color: #fff; color: var(--c-primary-dark); }
+.check-list { list-style: none; margin: 0 0 1.4em; padding: 0; }
+.check-list li { position: relative; padding-left: 26px; margin-bottom: 6px; }
+.check-list li::before { content: "✓"; position: absolute; left: 0; color: var(--c-accent); font-weight: 600; }
+.feature-grid .feat h3 { font-size: 1.08rem; margin-bottom: 6px; }
+.feature-grid .feat p { color: var(--c-text-soft); font-size: .95rem; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 980px; margin: 0 auto; counter-reset: step; }
+.steps .step { background: #fff; border-radius: var(--radius); padding: 26px 24px; box-shadow: var(--shadow-sm); counter-increment: step; }
+.steps .step::before { content: counter(step); display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: var(--c-primary); color: #fff; font-weight: 600; margin-bottom: 14px; }
+.steps .step p { color: var(--c-text-soft); font-size: .97rem; }
+.feature-grid.feature-grid--two { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.feature-grid.feature-grid--two .feat { padding: 22px 24px; }
+@media (max-width: 800px) { .about--reverse > img { order: 0; } .steps, .feature-grid.feature-grid--two { grid-template-columns: 1fr; } }
+
 .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); max-width: 900px; margin: 0 auto; }
 .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 

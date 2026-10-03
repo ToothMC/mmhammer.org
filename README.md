@@ -56,6 +56,7 @@ Im Finder: `website`-Ordner kopieren nach `/Users/michaelhammer/Projekte/mmhamme
 | `wohnmobil.html` | Hammer-Mobil |
 | `villa-potima.html` | Villa Potima |
 | `auswandern.html` | Expat-Kickstarter |
+| `consulting.html` | Hammer Consulting (Meike – Vertrieb, Prozesse, KI) |
 | `buecher.html` | Hammer-Bücher |
 | `impressum.html` | Impressum &amp; Datenschutz |
 | `styles.css` | Styling |
