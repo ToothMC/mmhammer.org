@@ -157,10 +157,12 @@ p:last-child { margin-bottom: 0; }
 }
 
 .carousel { position: relative; max-width: 920px; margin: 0 auto; }
-.carousel-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 4px 4px 20px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.carousel-track { display: flex; align-items: stretch; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 4px 4px 20px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .carousel-track::-webkit-scrollbar { display: none; }
-.testimonial { flex: 0 0 100%; scroll-snap-align: center; background: #fff; border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; min-height: 240px; margin: 0; }
-.testimonial img { max-width: 100%; max-height: 360px; width: auto; height: auto; border-radius: 8px; }
+.carousel--reviews { max-width: 1010px; padding: 0 46px; }
+.carousel--reviews .carousel-prev { left: 0; }
+.carousel--reviews .carousel-next { right: 0; }
+.carousel--reviews .review { flex: 0 0 calc(50% - 10px); scroll-snap-align: start; }
 .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; border: 0; background: #fff; box-shadow: var(--shadow-md); color: var(--c-primary-dark); font-size: 1.8rem; line-height: 1; cursor: pointer; z-index: 2; display: flex; align-items: center; justify-content: center; padding: 0; transition: background .2s, color .2s; }
 .carousel-btn:hover { background: var(--c-primary); color: #fff; }
 .carousel-prev { left: -8px; }
@@ -169,6 +171,9 @@ p:last-child { margin-bottom: 0; }
 .carousel-dots button { width: 9px; height: 9px; border-radius: 50%; border: 0; background: var(--c-border); padding: 0; cursor: pointer; transition: background .2s, transform .2s; }
 .carousel-dots button.active { background: var(--c-primary); transform: scale(1.25); }
 @media (max-width: 700px) {
+  .carousel--reviews { padding: 0; }
+  .carousel--reviews .review { flex-basis: 100%; }
+  .carousel--reviews .carousel-btn { display: none; }
   .carousel-prev { left: 0; }
   .carousel-next { right: 0; }
 }
@@ -209,3 +214,143 @@ p:last-child { margin-bottom: 0; }
 }
 
 #hammer-time { scroll-margin-top: 68px; }
+
+/* Villa Potima: Airbnb review summary */
+.stars { color: #C8102E; letter-spacing: .08em; }
+.stars .star-off { color: var(--c-border); }
+.fav-hero { text-align: center; max-width: 520px; margin: 0 auto 40px; }
+.fav-score { display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 6px; }
+.fav-score img { height: 104px; width: auto; }
+.fav-score img.flip, .fav-badge img.flip { transform: scaleX(-1); }
+.fav-score span { font-size: 5.2rem; font-weight: 600; line-height: 1; letter-spacing: -.03em; color: var(--c-primary-dark); }
+.fav-hero h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.fav-hero p { color: var(--c-text-soft); margin-bottom: 10px; }
+.fav-hero .fav-small { font-size: .9rem; }
+.rating-strip { display: grid; grid-template-columns: 1.25fr repeat(6, 1fr); max-width: 1010px; margin: 0 auto 40px; padding: 22px 0; border-top: 1px solid var(--c-border); border-bottom: 1px solid var(--c-border); }
+.rs-col { display: flex; flex-direction: column; gap: 4px; padding: 0 16px; border-left: 1px solid var(--c-border); }
+.rs-col:first-child { border-left: 0; padding-left: 0; }
+.rs-label { font-size: .88rem; font-weight: 600; color: var(--c-primary-dark); line-height: 1.3; min-height: 2.6em; }
+.rs-col strong { font-size: 1.05rem; font-weight: 600; }
+.rs-icon { width: 30px; height: 30px; margin-top: auto; padding-top: 8px; fill: none; stroke: var(--c-primary-dark); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; box-sizing: content-box; }
+.rs-dist { list-style: none; display: flex; flex-direction: column; gap: 3px; }
+.rs-dist li { display: flex; align-items: center; gap: 8px; font-size: .75rem; color: var(--c-text-soft); }
+.rs-dist .bar { flex: 1; height: 4px; border-radius: 4px; background: linear-gradient(90deg, var(--c-primary-dark) var(--v), var(--c-border) var(--v)); }
+/* compact Gäste-Favorit bar (homepage) */
+.fav-bar { display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 28px; max-width: 760px; margin: 0 auto 36px; background: #fff; border: 1px solid var(--c-border); border-radius: var(--radius); padding: 18px 30px; box-shadow: var(--shadow-sm); }
+.fav-badge { display: flex; align-items: center; gap: 4px; }
+.fav-badge img { height: 46px; width: auto; }
+.fav-badge strong { font-size: 1.05rem; font-weight: 600; line-height: 1.15; text-align: center; color: var(--c-primary-dark); }
+.fav-text { font-weight: 600; color: var(--c-primary-dark); line-height: 1.35; }
+.fav-num { text-align: center; padding: 0 0 0 4px; }
+.fav-num strong { display: block; font-size: 1.35rem; font-weight: 600; line-height: 1.1; color: var(--c-primary-dark); }
+.fav-num small { font-size: .8rem; color: var(--c-text-soft); }
+.fav-num .stars { font-size: .8rem; letter-spacing: .05em; }
+.fav-num + .fav-num { border-left: 1px solid var(--c-border); padding-left: 28px; }
+.reviews { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 920px; margin: 0 auto; }
+.review { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 22px 22px 18px; display: flex; flex-direction: column; gap: 10px; }
+.review p { color: var(--c-text); font-size: 1rem; line-height: 1.55; }
+.review footer { margin-top: auto; font-size: .88rem; color: var(--c-text-soft); }
+.review footer strong { color: var(--c-primary-dark); font-weight: 600; }
+.reviews-note { text-align: center; font-size: .85rem; color: var(--c-text-soft); margin: 24px 0 18px; }
+@media (max-width: 900px) {
+  .rating-strip { grid-template-columns: repeat(3, 1fr); row-gap: 22px; }
+  .rs-overall { grid-column: 1 / -1; padding: 0; }
+  .rs-col:nth-child(2), .rs-col:nth-child(5) { border-left: 0; padding-left: 0; }
+}
+@media (max-width: 720px) {
+  .fav-bar { grid-template-columns: 1fr 1fr; gap: 16px 20px; padding: 18px 20px; }
+  .fav-badge { grid-column: 1 / -1; justify-content: center; }
+  .fav-text { grid-column: 1 / -1; text-align: center; }
+  .fav-num + .fav-num { padding-left: 20px; }
+  .fav-score span { font-size: 4rem; }
+  .fav-score img { height: 84px; }
+  .reviews { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .rating-strip { grid-template-columns: repeat(2, 1fr); }
+  .rs-col:nth-child(5) { border-left: 1px solid var(--c-border); padding-left: 16px; }
+  .rs-col:nth-child(4), .rs-col:nth-child(6) { border-left: 0; padding-left: 0; }
+}
+
+/* ===== Villa Potima page: bright, sunny, mediterranean ===== */
+.villa { --sea: #1572A1; --sea-dark: #0E5379; --sand: #F6EFE3; --sun: #E9A23B; }
+.villa h2 { color: #16324A; }
+.villa-eyebrow { display: inline-block; font-size: .8rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #fff; margin-bottom: 14px; }
+.villa-eyebrow--dark { color: var(--sea); }
+.villa-center { display: block; text-align: center; }
+.villa-sand { background: var(--sand); }
+.btn.btn-sea { background: var(--sea); border-color: var(--sea); color: #fff; }
+.btn.btn-sea:hover { background: var(--sea-dark); border-color: var(--sea-dark); color: #fff; }
+.btn.btn-light { background: #fff; border-color: #fff; color: #16324A; }
+.btn.btn-light:hover { background: var(--sand); border-color: var(--sand); color: #16324A; }
+.btn.btn-ghost-light { background: transparent; border-color: rgba(255,255,255,.75); color: #fff; }
+.btn.btn-ghost-light:hover { background: rgba(255,255,255,.15); color: #fff; }
+
+.villa-hero { position: relative; min-height: 88vh; display: flex; align-items: flex-end; padding: 120px 0 72px; color: #fff; background: #7FB6D5 url('images/villa/hero.jpg') center 55% / cover no-repeat; isolation: isolate; }
+.villa-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(8,38,58,.62) 0%, rgba(8,38,58,.38) 38%, rgba(8,38,58,0) 68%), linear-gradient(180deg, rgba(8,38,58,0) 45%, rgba(8,38,58,.45) 100%); }
+.villa-hero h1 { font-size: clamp(2.8rem, 7vw, 5.2rem); font-weight: 600; line-height: 1; letter-spacing: -.03em; margin-bottom: 16px; text-shadow: 0 2px 24px rgba(0,0,0,.25); }
+.villa-lead { font-size: clamp(1.1rem, 2.2vw, 1.4rem); max-width: 640px; margin-bottom: 22px; text-shadow: 0 1px 14px rgba(0,0,0,.3); }
+.villa-facts { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.villa-facts li { background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.45); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 999px; padding: 6px 14px; font-size: .92rem; font-weight: 500; }
+.villa-hero-btns { justify-content: flex-start; }
+.villa-rating-pill { display: inline-flex; align-items: center; gap: 6px; margin-top: 22px; color: #fff; font-weight: 600; font-size: .95rem; }
+.villa-rating-pill .stars { color: var(--sun); }
+.villa-rating-pill:hover { color: #fff; text-decoration: underline; }
+
+.villa-split { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; }
+.villa-split h2 { text-align: left; margin-bottom: 20px; }
+.villa-split p { color: var(--c-text-soft); font-size: 1.05rem; }
+.villa-distances { list-style: none; display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.villa-distances li { background: var(--sand); border-radius: 12px; padding: 12px 16px; font-size: .92rem; color: var(--c-text-soft); }
+.villa-distances strong { display: block; font-size: 1.2rem; color: var(--sea); }
+.villa-collage { position: relative; padding-bottom: 60px; }
+.villa-collage img { border-radius: 18px; box-shadow: var(--shadow-md); }
+.villa-collage img:first-child { width: 88%; aspect-ratio: 4/3; object-fit: cover; }
+.villa-collage img:last-child { position: absolute; right: 0; bottom: 0; width: 52%; aspect-ratio: 4/3; object-fit: cover; border: 6px solid #fff; }
+
+.villa-highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.villa-hl { background: #fff; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .25s, box-shadow .25s; }
+.villa-hl:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.villa-hl img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.villa-hl div { padding: 20px 22px 24px; }
+.villa-hl h3 { color: #16324A; margin-bottom: 8px; }
+.villa-hl p { color: var(--c-text-soft); font-size: .98rem; }
+
+.villa-amenities { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; max-width: 980px; margin: 0 auto; }
+.villa-amenities li { display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid var(--c-border); border-radius: 14px; padding: 16px 18px; font-weight: 500; color: #16324A; }
+.villa-amenities svg { flex: 0 0 26px; width: 26px; height: 26px; fill: none; stroke: var(--sea); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.villa-lucky { display: flex; align-items: center; gap: 22px; max-width: 980px; margin: 36px auto 0; background: var(--sand); border-radius: 18px; overflow: hidden; }
+.villa-lucky img { width: 42%; aspect-ratio: 16/9; object-fit: cover; }
+.villa-lucky figcaption { font-size: 1.1rem; font-weight: 500; color: #16324A; padding-right: 24px; }
+
+.villa-cta { position: relative; color: #fff; text-align: center; padding: 110px 0; background: #C9844A url('images/villa/sonnenuntergang.jpg') center / cover no-repeat; isolation: isolate; }
+.villa-cta::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(20,30,45,.45); }
+.villa-cta h2 { color: #fff; margin-bottom: 14px; }
+.villa-cta p { max-width: 560px; margin: 0 auto 28px; font-size: 1.08rem; opacity: .95; }
+
+@media (max-width: 900px) {
+  .villa-split { grid-template-columns: 1fr; gap: 36px; }
+  .villa-highlights { grid-template-columns: repeat(2, 1fr); }
+  .villa-amenities { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .villa-hero { min-height: 640px; padding: 100px 0 48px; background-position: 60% center; }
+  .villa-hero-btns { flex-direction: column; align-items: stretch; }
+  .villa-highlights, .villa-amenities { grid-template-columns: 1fr; }
+  .villa-lucky { flex-direction: column; align-items: stretch; }
+  .villa-lucky img { width: 100%; }
+  .villa-lucky figcaption { padding: 0 20px 20px; }
+  .villa-cta { padding: 80px 0; }
+}
+@media (max-width: 600px) {
+  .villa-hero::before { background: linear-gradient(180deg, rgba(8,38,58,.15) 0%, rgba(8,38,58,.35) 40%, rgba(8,38,58,.72) 100%); }
+}
+.villa > section { background-color: #fff; }
+.villa > section.villa-sand { background-color: var(--sand); }
+.villa > section.villa-hero { background-color: #7FB6D5; }
+.villa > section.villa-cta { background-color: #C9844A; }
+.villa h2 { line-height: 1.2; }
+.villa-distances { display: grid; grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 480px) { .villa-distances { gap: 8px; } .villa-distances li { padding: 10px; font-size: .8rem; } .villa-distances strong { font-size: 1.05rem; } }
+.villa + .site-footer { margin-top: 0; }
+.villa .btn { text-align: center; }

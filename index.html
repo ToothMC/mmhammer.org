@@ -106,18 +106,32 @@
   </section>
   <section>
     <div class="container">
-      <h2>Bewertungen</h2>
-      <p class="section-intro">★ 5,0 · 3 Bewertungen auf Airbnb für die Villa Potima</p>
-      <div class="carousel" data-carousel>
+      <h2>Villa Potima – das sagen unsere Gäste</h2>
+      <div class="fav-bar">
+        <div class="fav-badge"><img src="images/laurel.svg" alt=""><strong>Gäste-<br>Favorit</strong><img class="flip" src="images/laurel.svg" alt=""></div>
+        <p class="fav-text">Laut unseren Gästen eine der beliebtesten Unterkünfte auf Airbnb</p>
+        <div class="fav-num"><strong>4,9</strong><span class="stars" aria-label="4,9 von 5 Sternen">★★★★★</span></div>
+        <div class="fav-num"><strong>10</strong><small>Bewertungen</small></div>
+      </div>
+      <div class="carousel carousel--reviews" data-carousel>
         <button class="carousel-btn carousel-prev" type="button" aria-label="Vorherige Bewertung">‹</button>
         <div class="carousel-track">
-          <figure class="testimonial"><img src="images/testimonial-overview.jpg" alt="Gesamtbewertung 5 von 5 Sternen, 3 Bewertungen" loading="lazy"></figure>
-          <figure class="testimonial"><img src="images/testimonial-andrej.jpg" alt="Bewertung von Andrei (Juli 2025)" loading="lazy"></figure>
-          <figure class="testimonial"><img src="images/testimonial-elysee.jpg" alt="Bewertung von Elysee (September 2025)" loading="lazy"></figure>
-          <figure class="testimonial"><img src="images/testimonial-fynn.jpg" alt="Bewertung von Fynn (Mai 2025)" loading="lazy"></figure>
+          <article class="review"><span class="stars" aria-label="5 von 5 Sternen">★★★★★</span><p>Fand alles genau wie beschrieben, nutzte den Infinity-Pool mehrmals täglich und mochte Katze Lucky.</p><footer><strong>Andy</strong> · August 2026 · etwa eine Woche</footer></article>
+          <article class="review"><span class="stars" aria-label="5 von 5 Sternen">★★★★★</span><p>Die große Familie fand problemlos Platz und fühlte sich wie zu Hause – Luxus-Niveau und eine besonders freundliche Katze.</p><footer><strong>Danny</strong> · August 2026 · etwa eine Woche</footer></article>
+          <article class="review"><span class="stars" aria-label="5 von 5 Sternen">★★★★★</span><p>Ideal für Gruppen ab acht Personen: Pool, Sauberkeit und Lage haben überzeugt – möchte wieder buchen.</p><footer><strong>Vasilis</strong> · Juli 2026 · einige Nächte</footer></article>
+          <article class="review"><span class="stars" aria-label="5 von 5 Sternen">★★★★★</span><p>Kurz und klar: ein rundum gelungener Aufenthalt.</p><footer><strong>Demetris</strong> · Juli 2026 · einige Nächte</footer></article>
+          <article class="review"><span class="stars" aria-label="5 von 5 Sternen">★★★★★</span><p>Lobt Pool, Außenbereich und die Kaffeemaschine. Coral Bay ist mit dem Auto in wenigen Minuten erreichbar, zu Fuß eher holprig.</p><footer><strong>Lisa</strong> · Juli 2026 · etwa eine Woche</footer></article>
+          <article class="review"><span class="stars" aria-label="5 von 5 Sternen">★★★★★</span><p>Modern, sauber und geräumig – das Highlight war der große Außenbereich mit uneinsehbarem Pool.</p><footer><strong>Yael</strong> · Juli 2026 · mit Kindern</footer></article>
+          <article class="review"><span class="stars" aria-label="4 von 5 Sternen">★★★★<span class="star-off">★</span></span><p>Schöne Lage, tolle Aussicht, Villa größer als erwartet und persönliche Begrüßung. Hinweis: In zwei Schlafzimmern fehlte volle Verdunkelung.</p><footer><strong>Lee</strong> · Juni 2026 · mehr als eine Woche</footer></article>
+          <article class="review"><span class="stars" aria-label="5 von 5 Sternen">★★★★★</span><p>Schön und geräumig, ruhig gelegen und trotzdem schnell überall – mit einem tollen Gastgeber.</p><footer><strong>Elysee</strong> · September 2025 · mehr als eine Woche</footer></article>
+          <article class="review"><span class="stars" aria-label="5 von 5 Sternen">★★★★★</span><p>Großer Pool, Grillplatz, gut ausgestattete Küche, Klimaanlage in jedem Raum und Heimkino – die Kinder liebten die Kätzchen.</p><footer><strong>Andrei</strong> · Juli 2025 · etwa eine Woche</footer></article>
+          <article class="review"><span class="stars" aria-label="5 von 5 Sternen">★★★★★</span><p>Begeistert von der Villa und will wiederkommen.</p><footer><strong>Fynn</strong> · Mai 2025 · einige Nächte</footer></article>
         </div>
         <button class="carousel-btn carousel-next" type="button" aria-label="Nächste Bewertung">›</button>
         <div class="carousel-dots" aria-hidden="true"></div>
+      </div>
+      <div class="btn-row" style="margin-top:28px;">
+        <a href="villa-potima.html#bewertungen" class="btn btn-secondary">Alle Bewertungen ansehen</a>
       </div>
     </div>
   </section>
@@ -151,19 +165,21 @@
 (function(){
   document.querySelectorAll('[data-carousel]').forEach(function(c){
     var track = c.querySelector('.carousel-track');
-    var slides = track.querySelectorAll('.testimonial');
+    var slides = track.children;
     var prev = c.querySelector('.carousel-prev');
     var next = c.querySelector('.carousel-next');
     var dotsWrap = c.querySelector('.carousel-dots');
     var dots = [];
-    slides.forEach(function(_, i){
+    var sw0 = slides[0].getBoundingClientRect().width + 20;
+    var pages = Math.max(1, slides.length - Math.round((track.clientWidth + 20) / sw0) + 1);
+    for (var i = 0; i < pages; i++) (function(i){
       var b = document.createElement('button');
       b.type = 'button';
       b.setAttribute('aria-label', 'Bewertung ' + (i+1));
       b.addEventListener('click', function(){ scrollTo(i); });
       dotsWrap.appendChild(b);
       dots.push(b);
-    });
+    })(i);
     function activeIndex(){
       var sw = slides[0].getBoundingClientRect().width + 20;
       return Math.round(track.scrollLeft / sw);
@@ -177,7 +193,7 @@
       track.scrollTo({ left: i * sw, behavior: 'smooth' });
     }
     prev.addEventListener('click', function(){ scrollTo(Math.max(0, activeIndex() - 1)); });
-    next.addEventListener('click', function(){ scrollTo(Math.min(slides.length - 1, activeIndex() + 1)); });
+    next.addEventListener('click', function(){ scrollTo(Math.min(pages - 1, activeIndex() + 1)); });
     track.addEventListener('scroll', function(){ window.requestAnimationFrame(update); });
     update();
   });
