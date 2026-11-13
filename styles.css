@@ -354,3 +354,35 @@ p:last-child { margin-bottom: 0; }
 @media (max-width: 480px) { .villa-distances { gap: 8px; } .villa-distances li { padding: 10px; font-size: .8rem; } .villa-distances strong { font-size: 1.05rem; } }
 .villa + .site-footer { margin-top: 0; }
 .villa .btn { text-align: center; }
+
+/* ===== Kontakt page (bright & personal) ===== */
+.k { --sea:#1572A1; --sea-dark:#0E5379; --sand:#F6EFE3; --sun:#E9A23B; --ink:#16324A; }
+.k h1, .k h2 { color: var(--ink); }
+.k .k-eyebrow { display:inline-block; font-size:.8rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--sea); margin-bottom:12px; }
+.k-ic { width:24px; height:24px; flex:0 0 24px; fill:none; stroke:var(--sea); stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.k-trust, .k-info { list-style:none; display:flex; flex-direction:column; gap:16px; }
+.k-trust li, .k-info li { display:flex; gap:14px; align-items:flex-start; }
+.k-trust strong, .k-info strong { display:block; color:var(--ink); font-weight:600; }
+.k-trust span, .k-info span { color:var(--c-text-soft); font-size:.95rem; line-height:1.45; }
+.k-info a { color:var(--sea); font-weight:500; }
+.k .contact-form { border:0; border-radius:20px; box-shadow:0 18px 50px rgba(22,50,74,.10); padding:36px; }
+.k .contact-form input[type=text], .k .contact-form input[type=email], .k .contact-form input[type=tel], .k .contact-form select, .k .contact-form textarea { background:#FBF8F3; border-color:#EDE4D6; border-radius:12px; }
+.k .contact-form input:focus, .k .contact-form select:focus, .k .contact-form textarea:focus { border-color:var(--sea); box-shadow:0 0 0 3px rgba(21,114,161,.15); background:#fff; }
+.k .contact-form button[type=submit] { background:var(--sea); border-color:var(--sea); }
+.k .contact-form button[type=submit]:hover { background:var(--sea-dark); border-color:var(--sea-dark); }
+.k ~ .site-footer { margin-top:0; }
+
+.ka-hero { background:linear-gradient(180deg,#FFF9EE 0%, var(--sand) 100%); padding:72px 0 64px; }
+.ka-split { display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center; }
+.ka-hero h1 { font-size:clamp(2.2rem,5vw,3.4rem); line-height:1.1; letter-spacing:-.02em; margin-bottom:18px; }
+.ka-hero p.lead { font-size:1.15rem; color:var(--c-text-soft); margin-bottom:28px; max-width:520px; }
+.ka-photo { position:relative; justify-self:center; }
+.ka-photo::before { content:""; position:absolute; width:78%; aspect-ratio:1; border-radius:50%; background:radial-gradient(circle,#FFD58A 0%,#F6B957 70%); right:-6%; top:-8%; z-index:0; opacity:.85; }
+.ka-photo img { position:relative; z-index:1; width:min(420px,100%); aspect-ratio:1; object-fit:cover; border-radius:28px 28px 120px 28px; box-shadow:0 20px 50px rgba(22,50,74,.18); }
+.ka-photo figcaption { position:absolute; z-index:2; left:-18px; bottom:24px; background:#fff; border-radius:999px; padding:10px 18px; font-weight:600; color:var(--ink); box-shadow:var(--shadow-md); }
+.ka-body { background:#fff; }
+.ka-grid { display:grid; grid-template-columns:1.7fr 1fr; gap:48px; max-width:1080px; margin:0 auto; align-items:start; }
+.ka-aside { background:var(--sand); border-radius:20px; padding:30px; }
+.ka-aside h2 { font-size:1.3rem; text-align:left; margin-bottom:20px; }
+@media (max-width:860px){ .ka-split,.ka-grid{ grid-template-columns:1fr; gap:36px; } .ka-photo{ order:-1; } .ka-photo figcaption{ left:8px; } }
+@media (max-width:860px){ .ka-hero { padding:40px 0 48px; } .ka-photo img { width:230px; } .ka-photo figcaption { left:-10px; bottom:14px; font-size:.9rem; padding:8px 14px; } }
