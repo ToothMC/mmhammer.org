@@ -3,11 +3,19 @@
   "trailingSlash": false,
   "redirects": [
     { "source": "/hammer-time", "destination": "/", "permanent": true },
-    { "source": "/hammer-time/wohnmobil", "destination": "/wohnmobil", "permanent": true },
     { "source": "/hammer-time/villa-potima", "destination": "/villa-potima", "permanent": true },
-    { "source": "/hammer-time/auswandern", "destination": "/auswandern", "permanent": true },
-    { "source": "/hammer-time/bücher", "destination": "/buecher", "permanent": true },
-    { "source": "/hammer-time/buecher", "destination": "/buecher", "permanent": true },
-    { "source": "/impressum-privacy-policy", "destination": "/impressum", "permanent": true }
+    { "source": "/hammer-time/wohnmobil", "destination": "/", "permanent": true },
+    { "source": "/hammer-time/auswandern", "destination": "/", "permanent": true },
+    { "source": "/hammer-time/bücher", "destination": "/", "permanent": true },
+    { "source": "/hammer-time/buecher", "destination": "/", "permanent": true },
+    { "source": "/impressum-privacy-policy", "destination": "/impressum", "permanent": true },
+    { "source": "/consulting", "destination": "/", "permanent": true },
+    { "source": "/auswandern", "destination": "/", "permanent": true },
+    { "source": "/buecher", "destination": "/", "permanent": true },
+    { "source": "/wohnmobil", "destination": "/", "permanent": true },
+    { "source": "/consulting.html", "destination": "/", "permanent": true },
+    { "source": "/auswandern.html", "destination": "/", "permanent": true },
+    { "source": "/buecher.html", "destination": "/", "permanent": true },
+    { "source": "/wohnmobil.html", "destination": "/", "permanent": true }
   ]
 }

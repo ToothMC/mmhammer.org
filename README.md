@@ -52,15 +52,12 @@ Im Finder: `website`-Ordner kopieren nach `/Users/michaelhammer/Projekte/mmhamme
 
 | Datei | Inhalt |
 |---|---|
-| `index.html` | Startseite |
-| `wohnmobil.html` | Hammer-Mobil |
+| `index.html` | Startseite – Hero „Träumst du noch – oder lebst du schon?“, Unsere Welt (Hammer-Time, Villa Potima, Monat Global), Über M+M, Video, Bewertungen |
 | `villa-potima.html` | Villa Potima |
-| `auswandern.html` | Expat-Kickstarter |
-| `consulting.html` | Hammer Consulting (Meike – Vertrieb, Prozesse, KI) |
-| `buecher.html` | Hammer-Bücher |
+| `kontakt.html` | Kontaktformular (→ `api/contact.js`) |
 | `impressum.html` | Impressum &amp; Datenschutz |
 | `styles.css` | Styling |
-| `vercel.json` | saubere URLs (`/wohnmobil` statt `/wohnmobil.html`) und Redirects von Google-Sites-URLs |
+| `vercel.json` | saubere URLs (`/villa-potima` statt `/villa-potima.html`), Redirects von Google-Sites-URLs und von entfernten Seiten (Consulting, Auswandern, Bücher, Wohnmobil) auf die Startseite |
 | `robots.txt`, `sitemap.xml` | SEO |
 
 ## Bilder
