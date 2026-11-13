@@ -52,7 +52,7 @@ Im Finder: `website`-Ordner kopieren nach `/Users/michaelhammer/Projekte/mmhamme
 
 | Datei | Inhalt |
 |---|---|
-| `index.html` | Startseite – Hero „Träumst du noch – oder lebst du schon?“, Unsere Welt (Hammer-Time, Villa Potima, Monat Global), Über M+M, Video, Bewertungen |
+| `index.html` | Startseite – Hero „Träumst du noch – oder lebst du schon?“, Unsere Welt (Hammer-Time, Villa Potima, MONAT Global), Über M+M, Video, Bewertungen |
 | `villa-potima.html` | Villa Potima |
 | `kontakt.html` | Kontaktformular (→ `api/contact.js`) |
 | `impressum.html` | Impressum &amp; Datenschutz |
