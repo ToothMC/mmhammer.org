@@ -67,6 +67,7 @@ p:last-child { margin-bottom: 0; }
 .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 .card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
 .cards--world .card img { aspect-ratio: 16/9; }
+.card img.card-img--logo { object-fit: contain; padding: 0 16%; background: var(--c-bg-soft); }
 .card-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
 .card-body p { color: var(--c-text-soft); }
 .card-link { margin-top: auto; padding-top: 16px; font-weight: 600; }
